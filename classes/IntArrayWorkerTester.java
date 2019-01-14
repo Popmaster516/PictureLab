@@ -31,6 +31,7 @@ public class IntArrayWorkerTester
 //    int count = worker.getCount(1);
 //    System.out.println("Count should be 6 and count is " + count);
 //  }
+
   
   /** Method to test getTotal */
   public static void testGetTotal()
@@ -59,12 +60,12 @@ public class IntArrayWorkerTester
 //    int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
 //    worker.setMatrix(nums2);
 //    int largest = worker.getLargest();
-//    System.out.println("Largest should be 6 and is " + largest); 
+//    System.out.println("Largest should be 6 and is " + largest);
 //    // test when largest is first
 //    int[][] nums3 = {{6, 2, 3}, {4, 5, 1}};
 //    worker.setMatrix(nums3);
 //    largest = worker.getLargest();
-//    System.out.println("Largest should be 6 and is " + largest); 
+//    System.out.println("Largest should be 6 and is " + largest);
 //    // test when largest is in the middle
 //    int[][] nums4 = {{1, 2, 3}, {6, 5, 1}};
 //    worker.setMatrix(nums4);

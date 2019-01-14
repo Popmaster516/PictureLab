@@ -77,7 +77,11 @@ public class IntArrayWorker
     }
     System.out.println();
   }
-  
+
+// public void getCount(num)
+// {
+//
+// }
   
   /** 
    * fill the array with a pattern
