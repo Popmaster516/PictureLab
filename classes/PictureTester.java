@@ -17,21 +17,21 @@ public class PictureTester
     beach.explore();
   }
 
-  public static void testGrayscale()
-  {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.grayscale();
-    beach.explore();
-  }
-
-  public static void testFixUnderwater()
-  {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.fixUnderwater();
-    beach.explore();
-  }
+//  public static void testGrayscale()
+//  {
+//    Picture beach = new Picture("beach.jpg");
+//    beach.explore();
+//    beach.grayscale();
+//    beach.explore();
+//  }
+//
+//  public static void testFixUnderwater()
+//  {
+//    Picture beach = new Picture("beach.jpg");
+//    beach.explore();
+//    beach.fixUnderwater();
+//    beach.explore();
+//  }
 
 
 
