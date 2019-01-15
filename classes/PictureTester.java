@@ -17,21 +17,21 @@ public class PictureTester
     beach.explore();
   }
 
-//  public static void testGrayscale()
-//  {
-//    Picture beach = new Picture("beach.jpg");
-//    beach.explore();
-//    beach.grayscale();
-//    beach.explore();
-//  }
-//
-//  public static void testFixUnderwater()
-//  {
-//    Picture beach = new Picture("beach.jpg");
-//    beach.explore();
-//    beach.fixUnderwater();
-//    beach.explore();
-//  }
+  public static void testGrayscale()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+  }
+
+  public static void testFixUnderwater()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.fixUnderwater();
+    beach.explore();
+  }
 
 
 
@@ -57,6 +57,23 @@ public class PictureTester
     caterpillar.mirrorVertical();
     caterpillar.explore();
   }
+
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
+    caterpillar.explore();
+  }
+
+  public static void testMirrorDiagonal()
+  {
+    Picture caterpillar = new Picture("sus.png");
+    caterpillar.explore();
+    caterpillar.mirrorDiagonal();
+    caterpillar.explore();
+  }
+
 
   public static void testMirrorVerticalRightToLeft()
   {
@@ -90,7 +107,7 @@ public class PictureTester
     temple.mirrorArms();
     temple.explore();
   }
-  
+
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -116,7 +133,7 @@ public class PictureTester
     // to run
     //testZeroBlue();
     //testKeepOnlyBlue();
-    //testNegate();
+    testNegate();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
@@ -124,7 +141,7 @@ public class PictureTester
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
-    testMirrorArms();
+    //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
