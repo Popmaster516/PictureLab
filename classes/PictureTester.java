@@ -25,13 +25,13 @@ public class PictureTester
     beach.explore();
   }
 
-//  public static void testFixUnderwater()
-//  {
-//    Picture beach = new Picture("beach.jpg");
-//    beach.explore();
-//    beach.fixUnderwater();
-//    beach.explore();
-//  }
+  public static void testFixUnderwater()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.fixUnderwater();
+    beach.explore();
+  }
 
 
 
