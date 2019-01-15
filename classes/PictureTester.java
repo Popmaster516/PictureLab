@@ -133,7 +133,7 @@ public class PictureTester
     // to run
     //testZeroBlue();
     //testKeepOnlyBlue();
-    testNegate();
+    //testNegate();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
