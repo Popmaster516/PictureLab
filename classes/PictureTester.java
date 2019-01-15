@@ -99,7 +99,15 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  
+
+  public static void testMirrorGull()
+  {
+    Picture caterpillar = new Picture("seagull.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorGull();
+    caterpillar.explore();
+  }
+
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -134,7 +142,7 @@ public class PictureTester
     //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
-    //testMirrorGull();
+    testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
