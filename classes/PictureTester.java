@@ -100,6 +100,15 @@ public class PictureTester
     temple.explore();
   }
 
+  public static void testMirrorArms()
+  {
+    Picture temple = new Picture("snowman.jpg");
+    temple.explore();
+    temple.mirrorArms();
+    temple.explore();
+  }
+
+
   public static void testMirrorGull()
   {
     Picture caterpillar = new Picture("seagull.jpg");
@@ -142,7 +151,7 @@ public class PictureTester
     //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
-    testMirrorGull();
+    //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
