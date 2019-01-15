@@ -16,7 +16,25 @@ public class PictureTester
     beach.zeroBlue();
     beach.explore();
   }
-  
+
+  public static void testGrayscale()
+  {
+    Picture beach = new Picture("beach.jpg");
+    beach.explore();
+    beach.grayscale();
+    beach.explore();
+  }
+
+//  public static void testFixUnderwater()
+//  {
+//    Picture beach = new Picture("beach.jpg");
+//    beach.explore();
+//    beach.fixUnderwater();
+//    beach.explore();
+//  }
+
+
+
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -38,7 +56,7 @@ public class PictureTester
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("640x480.jpg");
+    Picture canvas = new Picture("capture.jpg");
     canvas.createCollage();
     canvas.explore();
   }
@@ -58,7 +76,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
