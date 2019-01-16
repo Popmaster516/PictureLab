@@ -27,7 +27,7 @@ public class PictureTester
 
   public static void testFixUnderwater()
   {
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("water.jpg");
     beach.explore();
     beach.fixUnderwater();
     beach.explore();
@@ -128,7 +128,15 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
+    Picture swan = new Picture("God2.jpg");
+    swan.edgeDetection(10);
+    swan.explore();
+  }
+
+  public static void testEdgeDetection2()
+  {
     Picture swan = new Picture("swan.jpg");
+    swan.explore();
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -140,7 +148,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
