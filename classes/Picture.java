@@ -122,7 +122,7 @@ public class Picture extends SimplePicture
       for ( int col = 0; col < pixels[0].length; col++ )
       {
         pixel = pixels[row][col];
-        pixel.setRed( pixel.getRed() * 3 );
+        pixel.setRed( pixel.getRed() * 7 );
       }
     }
   }
@@ -338,19 +338,19 @@ public class Picture extends SimplePicture
     * @param startRow the start row to copy to
     * @param startCol the start col to copy to
     */
-  public void copy(Picture fromPic, 
+  public void copy(Picture fromPic,
                  int startRow, int startCol)
   {
     Pixel fromPixel = null;
     Pixel toPixel = null;
     Pixel[][] toPixels = this.getPixels2D();
     Pixel[][] fromPixels = fromPic.getPixels2D();
-    for (int fromRow = 0, toRow = startRow; 
+    for (int fromRow = 0, toRow = startRow;
          fromRow < fromPixels.length &&
          toRow < toPixels.length; 
          fromRow++, toRow++)
     {
-      for (int fromCol = 0, toCol = startCol; 
+      for (int fromCol = 0, toCol = startCol;
            fromCol < fromPixels[0].length &&
            toCol < toPixels[0].length;  
            fromCol++, toCol++)
@@ -359,7 +359,30 @@ public class Picture extends SimplePicture
         toPixel = toPixels[toRow][toCol];
         toPixel.setColor(fromPixel.getColor());
       }
-    }   
+    }
+  }
+
+  public void copy2(Picture fromPic, int startRow, int endRow, int startCol, int endCol)
+  {
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+    for (int fromRow = startRow, toRow = endRow;
+         fromRow < fromPixels.length &&
+                 toRow < toPixels.length;
+         fromRow++, toRow++)
+    {
+      for (int fromCol = startCol, toCol = endCol;
+           fromCol < fromPixels[0].length &&
+                   toCol < toPixels[0].length;
+           fromCol++, toCol++)
+      {
+        fromPixel = fromPixels[fromRow][fromCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(fromPixel.getColor());
+      }
+    }
   }
 
   /** Method to create a collage of several pictures */
@@ -377,6 +400,30 @@ public class Picture extends SimplePicture
     this.copy(flower2,500,0);
     this.mirrorVertical();
     this.write("collage.jpg");
+  }
+
+  public void myCollage()
+  {
+    Picture p1 = new Picture("God.jpg");
+    Picture p2 = new Picture("God2.jpg");
+    Picture p3 = new Picture("water.jpg");
+    this.copy(p1,0,0);
+    this.copy(p2,100,0);
+    this.copy(p3,200,0);
+    Picture mirror1 = new Picture(p1);
+    mirror1.mirrorVertical();
+    this.copy(mirror1,300,0);
+    Picture mirror2 = new Picture(p2);
+    mirror2.mirrorHorizontal();
+    this.copy(mirror2,300,0);
+    Picture mirror3 = new Picture(p3);
+    mirror3.mirrorDiagonal();
+    this.copy(mirror3,300,0);
+    this.copy(p1,400,0);
+    this.copy(p2,500,0);
+    this.copy(p3,500,0);
+    this.mirrorVertical();
+    this.write("boop.jpg");
   }
   
   
