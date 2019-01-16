@@ -68,7 +68,7 @@ public class PictureTester
 
   public static void testMirrorDiagonal()
   {
-    Picture caterpillar = new Picture("sus.png");
+    Picture caterpillar = new Picture("beach.jpg");
     caterpillar.explore();
     caterpillar.mirrorDiagonal();
     caterpillar.explore();
@@ -117,11 +117,26 @@ public class PictureTester
     caterpillar.explore();
   }
 
+  public static void testCopy()
+  {
+    Picture boop = new Picture("God.jpg");
+    boop.explore();
+    boop.copy2(boop, 0, 100, 0, 100);
+    boop.explore();
+  }
+
   /** Method to test the collage method */
   public static void testCollage()
   {
     Picture canvas = new Picture("640x480.jpg");
     canvas.createCollage();
+    canvas.explore();
+  }
+
+  public static void testMyCollage()
+  {
+    Picture canvas = new Picture("640x480.jpg");
+    canvas.myCollage();
     canvas.explore();
   }
   
@@ -156,12 +171,15 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+    //testMirrorHorizontal();
+    //testMirrorVerticalRightToLeft();
     //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
+    testMyCollage();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
