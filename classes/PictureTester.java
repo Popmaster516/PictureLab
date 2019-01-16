@@ -121,6 +121,14 @@ public class PictureTester
   {
     Picture boop = new Picture("God.jpg");
     boop.explore();
+    boop.copy(boop, 0,  0);
+    boop.explore();
+  }
+
+  public static void testCopy2()
+  {
+    Picture boop = new Picture("sus.png");
+    boop.explore();
     boop.copy2(boop, 0, 100, 0, 100);
     boop.explore();
   }
@@ -143,7 +151,8 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("God2.jpg");
+    Picture swan = new Picture("swan.jpg");
+    swan.explore();
     swan.edgeDetection(10);
     swan.explore();
   }
@@ -181,8 +190,9 @@ public class PictureTester
     //testCollage();
     //testMyCollage();
     //testCopy();
+    //testCopy2();
     //testEdgeDetection();
-    //testEdgeDetection2();
+    testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
